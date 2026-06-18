@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Outfit", sans-serif;
+  
+  --color-brand-blush: #FFF5F5;
+  --color-brand-rose: #FF85A2;
+  --color-brand-rose-dark: #FF6B8B;
+  --color-brand-berry: #4A2831;
+  --color-brand-berry-light: #6B444E;
+}
+
+/* Base reset & styling */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #FFF5F5;
+  color: #4A2831;
+  overflow-x: hidden;
+}
+
+/* Smooth transition for hover elements */
+a, button, select, input, textarea {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Glassmorphism custom classes */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 133, 162, 0.25); /* soft pink border tint */
+  box-shadow: 0 8px 32px 0 rgba(74, 40, 49, 0.05);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(255, 133, 162, 0.40);
+  box-shadow: 0 12px 40px 0 rgba(74, 40, 49, 0.10);
+  transform: translateY(-4px);
+}
+
+/* Hide scrollbar for brand slider */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom scrolling animations (reveal on scroll) */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes marqueeLeft {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes marqueeRight {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0%); }
+}
+
+.animate-marquee-left {
+  animation: marqueeLeft 45s linear infinite;
+}
+
+.animate-marquee-right {
+  animation: marqueeRight 45s linear infinite;
+}
