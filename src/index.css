@@ -23,6 +23,7 @@ body {
   background-color: #FFF5F5;
   color: #4A2831;
   overflow-x: hidden;
+  padding-top: 80px;
 }
 
 /* Smooth transition for hover elements */

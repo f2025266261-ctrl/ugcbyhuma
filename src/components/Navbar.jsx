@@ -20,7 +20,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 w-full z-[60] transition-all duration-300 bg-white/70 backdrop-blur-xl ${
+    <nav className={`fixed top-0 left-0 w-full z-[1000] transition-all duration-300 bg-white backdrop-blur-xl ${
       isScrolled 
         ? 'py-4 glass-panel border-b border-[#FFB6C1]/20 shadow-sm' 
         : 'py-6 border-b border-[#FFB6C1]/15 shadow-sm'
@@ -64,7 +64,7 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`md:hidden fixed top-[73px] left-0 w-full glass-panel border-b border-[#FFB6C1]/20 shadow-lg transition-all duration-300 ease-in-out overflow-hidden ${
+      <div className={`md:hidden fixed top-[80px] left-0 w-full glass-panel border-b border-[#FFB6C1]/20 shadow-lg transition-all duration-300 ease-in-out overflow-hidden ${
         isOpen ? 'max-h-80 opacity-100 py-6' : 'max-h-0 opacity-0 pointer-events-none'
       }`}>
         <div className="flex flex-col items-center gap-5 px-6">
