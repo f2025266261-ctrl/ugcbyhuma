@@ -23,12 +23,12 @@ body {
   background-color: #FFF5F5;
   color: #4A2831;
   overflow-x: hidden;
-  padding-top: 96px;
+  padding-top: 72px;
 }
 
 @media (min-width: 768px) {
   body {
-    padding-top: 104px;
+    padding-top: 96px;
   }
 }
 
