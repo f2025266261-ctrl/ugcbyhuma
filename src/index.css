@@ -23,7 +23,13 @@ body {
   background-color: #FFF5F5;
   color: #4A2831;
   overflow-x: hidden;
-  padding-top: 80px;
+  padding-top: 96px;
+}
+
+@media (min-width: 768px) {
+  body {
+    padding-top: 104px;
+  }
 }
 
 /* Smooth transition for hover elements */
