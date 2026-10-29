@@ -3,6 +3,8 @@ import Hero from './components/Hero';
 import BrandTicker from './components/BrandTicker';
 import WhyMe from './components/WhyMe';
 import Services from './components/Services';
+import FeaturedWork from './components/FeaturedWork';
+import DiscountCodes from './components/DiscountCodes';
 import About from './components/About';
 import ContactSection from './components/ContactSection';
 
@@ -15,6 +17,8 @@ function App() {
         <BrandTicker />
         <WhyMe />
         <Services />
+        <FeaturedWork />
+        <DiscountCodes />
         <About />
         <ContactSection />
       </main>

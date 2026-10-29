@@ -16,11 +16,11 @@ export default function Hero() {
         <div className="min-w-0 flex flex-col justify-center gap-4 sm:gap-5 md:gap-6 self-center py-1 sm:py-2 md:py-0 order-2">
           <div className="hidden md:inline-flex w-fit items-center gap-2 rounded-full border border-[#FFB6C1]/40 bg-[#FFD1DC]/60 px-3 py-1.5 sm:px-4">
             <span className="h-2 w-2 rounded-full bg-[#FF85A2] animate-pulse"></span>
-            <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-wide text-[#4A2831]">Trusted by 100+ Brands</span>
+            <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-wide text-[#4A2831]">Trusted by 300+ Brands</span>
           </div>
 
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[0.95] text-[#4A2831]">
-            ugcbyhuma
+            Huma Arif
           </h1>
 
           <p className="max-w-xl text-sm leading-relaxed text-[#6B444E] sm:text-base md:text-lg">
@@ -41,7 +41,7 @@ export default function Hero() {
           <div className="md:hidden mt-2 flex flex-col gap-4">
             <div className="inline-flex w-fit items-center gap-2 rounded-full border border-[#FFB6C1]/40 bg-[#FFD1DC]/60 px-3 py-1.5 sm:px-4">
               <span className="h-2 w-2 rounded-full bg-[#FF85A2] animate-pulse"></span>
-              <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-wide text-[#4A2831]">Worked with 100+ brands</span>
+              <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-wide text-[#4A2831]">Trusted by 300+ Brands</span>
             </div>
 
             <a

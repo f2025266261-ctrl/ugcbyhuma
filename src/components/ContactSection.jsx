@@ -51,8 +51,8 @@ const contactLinks = [
   },
   {
     label: 'Instagram',
-    value: '@ugcbyhuma',
-    href: 'https://www.instagram.com/ugcbyhuma?igsh=ZnZhMW1pYzNrNHd2',
+    value: '@huma._.arif_',
+    href: 'https://www.instagram.com/huma._.arif_?srtk=MXJqZWZnMDhqbTlxaQ==',
     icon: <InstagramIcon />,
     note: 'Portfolio highlights, reels, and recent work.',
   },
@@ -88,7 +88,7 @@ function ContactRow({ label, value, href, icon, note }) {
 
         <div>
           <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#9A6B75]">{label}</p>
-          <p className="mt-1 text-base font-semibold text-[#4A2831] transition-colors duration-300 group-hover:text-[#FF85A2]">
+          <p className="mt-1 text-base font-semibold text-[#4A2831] transition-colors duration-300 group-hover:text-[#FF85A2] [overflow-wrap:anywhere]">
             {value}
           </p>
           <p className="mt-1.5 max-w-xs text-sm leading-relaxed text-[#6B444E]">{note}</p>

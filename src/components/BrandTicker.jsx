@@ -1,30 +1,54 @@
-const BRANDS = [
-  "Mad dental care", "Skin White", "Revival health care", "Realme Pakistan", "U-veil",
-  "Deluxe footwear", "Scents and stories", "Bandb derma", "Rivaaj mahal", "Beautycharms.global",
-  "Sadoer pk", "Viceroy", "True clean", "Zamzam natural", "Kenny", "Kleo.inc",
-  "Flux (clothing brand)", "Beenish hijabs", "Formul8", "Zenimaherbs", "Luminelle",
-  "Aura by zoha", "Oreya Heath care", "Orhni e zehra", "Charmora creates", "Chori wla pk",
-  "Purelix herbal", "Healuxe", "Orah fragrance", "Guard rice and pasta", "Christine cosmetic",
-  "Get smile", "Glamris skincare", "bio aqua", "Farlin cosmetics", "Cleaner.pk",
-  "Gulayn", "Nova skin", "Ruhi pure", "Sheen home decore", "Deciper bookstore",
-  "Rkstore", "Ricca professional", "Zylmora jewels", "Lavish glow", "Gooey bubbles",
-  "Meclay London", "Root and leaf", "Sintra jewels", "Fruitybites", "Uptown la",
-  "Ideal paper product", "Julystar", "Ahmad foods", "Juus", "Olim natural",
-  "Safrin skin care"
-];
-
 const BRAND_ROWS = [
-  BRANDS.slice(0, 14),
-  BRANDS.slice(14, 28),
-  BRANDS.slice(28, 42),
-  BRANDS.slice(42, 56),
+  // Row 1 (26 brands: 14 existing + 12 new, interleaved)
+  [
+    "Mad dental care", "Astore.pk", "Skin White", "Aurel derma Pakistan",
+    "Revival health care", "Pyoor body essential", "Realme Pakistan", "U-veil",
+    "Hair beauty skin care", "Deluxe footwear", "Accufix cosmetics", "Scents and stories",
+    "Glow natural pk", "Bandb derma", "Dermasation", "Rivaaj mahal",
+    "Nirvana botanics", "Beautycharms.global", "Ray by rafya", "Sadoer pk",
+    "Viceroy", "Aish cosmetics", "True clean", "Nomi.booksy",
+    "Zamzam natural", "Mexa.pk"
+  ],
+
+  // Row 2 (25 brands: 14 existing + 11 new, interleaved)
+  [
+    "Kenny", "Frakininsta", "Kleo.inc", "Sunsilk",
+    "Flux (clothing brand)", "Beenish hijabs", "Golden pearl cosmetics", "Formul8",
+    "Timaz.pk", "Zenimaherbs", "Drglow.pk", "Luminelle",
+    "Uraan", "Aura by zoha", "Oreya Heath care", "Olivia hair Care official",
+    "Orhni e zehra", "MyCompact.pk", "Charmora creates", "Tapal danedar organic slim.pk",
+    "Chori wla pk", "Purelix herbal", "Abeehasglam", "Healuxe",
+    "Natural and organic"
+  ],
+
+  // Row 3 (25 brands: 14 existing + 11 new, interleaved)
+  [
+    "Orah fragrance", "Mehak clothing store", "Guard rice and pasta", "Fiza Minahil official",
+    "Christine cosmetic", "Get smile", "Rivion", "Glamris skincare",
+    "Safa by Qurat", "bio aqua", "Chic charms", "Farlin cosmetics",
+    "Zarif ornaments", "Cleaner.pk", "Gulayn", "Children publications",
+    "Nova skin", "Furelle beauty", "Ruhi pure", "Horiza Sohail",
+    "Sheen home decore", "Deciper bookstore", "Printale.pk", "Rkstore",
+    "Taleem ul Quran"
+  ],
+
+  // Row 4 (26 brands: 15 existing + 11 new, interleaved)
+  [
+    "Ricca professional", "Olaskincarecanada", "Zylmora jewels", "Lavish glow",
+    "Chamak Dubai waly", "Gooey bubbles", "Danzure.pk", "Meclay London",
+    "Eloriagermany", "Root and leaf", "Sintra jewels", "Yh archives",
+    "Fruitybites", "Global Mart by usba", "Uptown la", "Maneessentia",
+    "Ideal paper product", "Julystar", "Essencelumora", "Ahmad foods",
+    "Farmaish bazaar", "Juus", "Jackie cosmetics", "Olim natural",
+    "Safrin skin care", "Ezioncom"
+  ]
 ];
 
 const ROW_CONFIG = [
-  { direction: 'left', duration: '40s' },
-  { direction: 'right', duration: '36s' },
-  { direction: 'left', duration: '44s' },
-  { direction: 'right', duration: '32s' },
+  { direction: 'left', duration: '74s' },
+  { direction: 'right', duration: '64s' },
+  { direction: 'left', duration: '78s' },
+  { direction: 'right', duration: '60s' },
 ];
 
 export default function BrandTicker() {
@@ -40,7 +64,7 @@ export default function BrandTicker() {
           {brands.map((brand, idx) => (
             <div 
               key={idx} 
-              className="inline-block bg-white/40 backdrop-blur-md border border-white/60 text-[#4A2831] px-6 py-3 rounded-2xl font-medium shadow-sm transition-all duration-300 hover:scale-105"
+              className="inline-block bg-white/40 backdrop-blur-md border border-white/60 text-[#4A2831] px-6 py-3 rounded-2xl font-medium shadow-sm transition-all duration-300 hover:scale-105 whitespace-nowrap"
             >
               ✨ {brand}
             </div>
@@ -55,7 +79,7 @@ export default function BrandTicker() {
           {brands.map((brand, idx) => (
             <div 
               key={`dup-${idx}`} 
-              className="inline-block bg-white/40 backdrop-blur-md border border-white/60 text-[#4A2831] px-6 py-3 rounded-2xl font-medium shadow-sm transition-all duration-300 hover:scale-105"
+              className="inline-block bg-white/40 backdrop-blur-md border border-white/60 text-[#4A2831] px-6 py-3 rounded-2xl font-medium shadow-sm transition-all duration-300 hover:scale-105 whitespace-nowrap"
             >
               ✨ {brand}
             </div>
